@@ -29,7 +29,7 @@ const viewDetail = (character) => {
 
 <template>
   <div @click="viewDetail(character)" class="character-cards my-3">
-    <img :src="character.img" class="character-img" alt="..." />
+    <img :src="character.img" class="character-img" :alt="character.name" />
     <ul class="character-info">
       <li>
         <span class="character-info__info"> Nombre: </span>
@@ -54,5 +54,3 @@ const viewDetail = (character) => {
     </ul>
   </div>
 </template>
-
-<style lang="scss"></style>

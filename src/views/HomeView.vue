@@ -8,6 +8,7 @@ const store = useUserStore();
 const getRandomCharacter = computed(() => {
   return store.getRandomCharacter;
 });
+const show_spinner = ref(true);
 const search = ref("");
 const state = reactive({
   search,
@@ -19,6 +20,7 @@ const prueba = computed(() => {
 });
 onMounted(() => {
   store.getData();
+  setTimeout(() => (show_spinner.value = false), 2000);
 });
 </script>
 
@@ -37,23 +39,31 @@ onMounted(() => {
         alt=""
       />
     </div>
-    <div v-show="state.search == ''" class="container">
-      <div class="row">
-        <div class="col" v-for="c in getRandomCharacter" :key="c.char_id">
-          <CharacterCard :character="c" />
+    <div v-if="show_spinner" class="">
+      <img class="spinner" src="@/assets/img/spinner.gif" alt="loading_img" />
+    </div>
+    <div v-else class="">
+      <div v-show="state.search == ''" class="container">
+        <div class="row">
+          <p class="text-center text-success">
+            Tu personaje random del momento es:
+          </p>
+          <div class="col" v-for="c in getRandomCharacter" :key="c.char_id">
+            <CharacterCard :character="c" />
+          </div>
         </div>
       </div>
-    </div>
-    <div v-show="state.search != ''" class="container">
-      <div class="row">
-        <div class="col" v-for="c in prueba" :key="c.char_id">
-          <CharacterCard :character="c" />
+      <div v-show="state.search != ''" class="container">
+        <div class="row">
+          <div class="col" v-for="c in prueba" :key="c.char_id">
+            <CharacterCard :character="c" />
+          </div>
         </div>
       </div>
-    </div>
-    <div v-show="prueba.length == 0">
-      <h2 class="no-info__title">Personaje no encontrado</h2>
-      <p class="no-info__text">k</p>
+      <div v-show="prueba.length == 0">
+        <h2 class="no-info__title">Personaje no encontrado</h2>
+        <p class="no-info__text">k</p>
+      </div>
     </div>
   </main>
 </template>

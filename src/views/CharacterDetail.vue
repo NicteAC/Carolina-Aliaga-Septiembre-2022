@@ -31,7 +31,11 @@ onMounted(() => {
     <h1 class="character-main__name text-success">{{ character.name }}</h1>
     <div class="d-lg-flex justify-content-lg-center">
       <div class="">
-        <img class="character-main__img" :src="character.img" alt="" />
+        <img
+          class="character-main__img"
+          :src="character.img"
+          :alt="character.name"
+        />
       </div>
       <div class="ms-lg-4">
         <p class="character-main__nick">Nickname: {{ character.nickname }}</p>
