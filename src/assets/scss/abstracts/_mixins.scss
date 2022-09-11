@@ -1,0 +1,93 @@
+@mixin flexbox($dis, $direccion, $corte, $just, $align) {
+  display: $dis;
+  flex-flow: $direccion $corte;
+  justify-content: $just;
+  align-items: $align;
+}
+@mixin scrollBar {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(100, 100, 100, 0.1);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(100, 100, 100, 0.2);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 100, 100, 0.3);
+  }
+}
+
+@mixin button($color, $backColor, $width: auto) {
+  width: $width;
+  border: none;
+  height: 35px;
+  padding: 0 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color;
+  background: $backColor;
+  font-size: 15px;
+  font-family: "Quicksand-Bold";
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+@mixin button2($color, $backColor, $width: auto) {
+  border: 2px solid $color;
+  width: $width;
+  height: 35px;
+  padding: 0 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color;
+  background: $backColor;
+  font-size: 15px;
+  font-family: "Quicksand-Bold";
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+@mixin input($width, $paddLeft) {
+  height: 35px;
+  width: $width;
+  border: none;
+  padding-left: $paddLeft;
+  color: map-get($colors, "primary-font");
+  font-family: "Product Sans Regular";
+  font-size: 15px;
+
+  &::placeholder {
+    color: map-get($colors, "primary-font");
+    font-family: "Product Sans Regular";
+    font-size: 15px;
+  }
+
+  &::-webkit-input-placeholder {
+    font-family: "Product Sans Regular";
+  }
+}
+@mixin input_container {
+  border-radius: 5px;
+  border: 1px solid map-get($colors, "inputs");
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}

@@ -1,0 +1,47 @@
+$font_path: "@/assets/fonts/";
+
+@font-face {
+   font-family: "Breaking-Bad";
+   src: url($font_path + "Breaking-Bad.ttf");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Montserrat-Regular";
+   src: url($font_path + "Montserrat-Regular.ttf");
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Montserrat-Italic";
+   src: url($font_path + "Montserrat-Italic.ttf");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Montserrat-Light";
+   src: url($font_path + "Montserrat-Light.ttf");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Montserrat-LightItalic";
+   src: url($font_path + "Montserrat-LightItalic.ttf");
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Montserrat-Bold";
+   src: url($font_path + "Montserrat-Bold.ttf");
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Montserrat-BoldItalic";
+   src: url($font_path + "Montserrat-BoldItalic.ttf");
+   font-weight: normal;
+   font-style: normal;
+}

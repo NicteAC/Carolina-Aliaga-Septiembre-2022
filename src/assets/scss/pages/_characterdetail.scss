@@ -1,0 +1,47 @@
+.character-main {
+  &__age,
+  &__nick,
+  &__ocupation,
+  &__status,
+  &__quote {
+    font-family: map-get($fonts, "main");
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: map-get($colors, "primary-font");
+  }
+  &__img {
+    max-width: 300px;
+    margin: auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  &__name {
+    font-family: map-get($fonts, "bold");
+    text-align: center;
+    font-size: 3rem;
+  }
+  &__nick {
+  }
+  &__ocupation {
+  }
+  &__quote {
+    max-width: 500px;
+    &--text {
+      font-family: map-get($fonts, "italic");
+    }
+  }
+  &__status {
+    &--alive {
+      color: map-get($colors, "light-green");
+    }
+    &--dead {
+      color: map-get($colors, "red");
+    }
+    &--unknown {
+      color: map-get($colors, "yellow");
+    }
+  }
+}
