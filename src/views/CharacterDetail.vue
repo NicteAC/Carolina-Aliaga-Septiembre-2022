@@ -14,7 +14,11 @@ const getAge = computed(() => {
   const date = new Date();
   const birthday = new Date(character.value.birthday);
   const age = date.getFullYear() - birthday.getFullYear();
-  return age;
+  if (age >= 0) {
+    return age;
+  } else {
+    return "Desconocida";
+  }
 });
 const quote = computed(() => {
   return getQuote.value[Math.floor(Math.random() * getQuote.value.length)]
@@ -39,9 +43,7 @@ onMounted(() => {
       </div>
       <div class="ms-4 mt-4 mt-sm-0">
         <p class="character-main__nick">Nickname: {{ character.nickname }}</p>
-        <p class="character-main__age">
-          Edad: {{ getAge != NaN ? getAge : "Desconocida" }}
-        </p>
+        <p class="character-main__age">Edad: {{ getAge }}</p>
         <p class="character-main__status">
           Status:
           <span
