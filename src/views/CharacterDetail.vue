@@ -40,7 +40,7 @@ onMounted(() => {
       <div class="ms-4 mt-4 mt-sm-0">
         <p class="character-main__nick">Nickname: {{ character.nickname }}</p>
         <p class="character-main__age">
-          Edad: {{ getAge == NaN ? getAge : "Desconocida" }}
+          Edad: {{ getAge != NaN ? getAge : "Desconocida" }}
         </p>
         <p class="character-main__status">
           Status:
