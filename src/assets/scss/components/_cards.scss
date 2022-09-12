@@ -41,7 +41,7 @@
   background-color: map-get($colors, "cards");
   color: map-get($colors, "primary-font");
   margin: 0;
-  padding: 5px 0 0 10px;
+  padding: 5px 10px 0 ;
   height: calc(100% - 300px);
   border-radius: 0 0 10px 10px;
   li {
